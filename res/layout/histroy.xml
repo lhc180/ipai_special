@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/zr_white"
+    android:orientation="vertical">
+  <TextView android:id="@+id/mHistory"
+      style="@style/StyleBarTitle"
+      android:text="历史"
+      />
+  <View android:layout_width="wrap_content"
+      android:layout_height="@dimen/main_button_top"/>
+  <FrameLayout android:id="@+id/relativeLayout2"
+      android:layout_width="fill_parent" android:layout_height="fill_parent"
+      >
+    <!--<LinearLayout-->
+    <!--android:layout_height="fill_parent" android:gravity="center_horizontal"-->
+    <!--android:orientation="vertical" android:layout_width="fill_parent"-->
+    <!--android:id="@+id/linearLayout1">-->
+    <!--</LinearLayout>-->
+
+    <ListView android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_height"
+        android:listSelector="@drawable/zrlistselectbg"
+        android:cacheColorHint="#00000000" android:id="@+id/clear"/>
+    <LinearLayout
+        android:paddingTop="7dp"
+        android:paddingLeft="10dp"
+        android:layout_height="55dp" android:background="#b0000000"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_gravity="center_horizontal|bottom"
+        >
+      <Button android:layout_width="@dimen/button_width"
+          android:layout_height="@dimen/button_height"
+          android:text="全部选中" android:visibility="visible"
+          android:id="@+id/deleteAll"/>
+      <Button android:layout_width="@dimen/button_width"
+          android:layout_height="@dimen/button_height"
+          android:text="==========" android:visibility="invisible"
+          android:id="@+id/viewadapter"/>
+      <Button android:layout_width="@dimen/button_width"
+          android:layout_height="@dimen/button_height"
+          android:text="删除选中" android:visibility="visible"
+          android:id="@+id/clearButton"/>
+    </LinearLayout>
+  </FrameLayout>
+
+
+</LinearLayout>

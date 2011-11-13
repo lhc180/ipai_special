@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="splash_margin_top">233.0dip</dimen>
+
+    <dimen name="toolbar_height">27dp</dimen>
+
+    <dimen name="main_button_top">20dp</dimen>
+    <dimen name="main_button_space">6.7dp</dimen>
+    <dimen name="main_button_left">20dp</dimen>
+    <dimen name="main_button_right">20dp</dimen>
+
+    <dimen name="tab_height">60dp</dimen>
+    <dimen name="title_height">33dp</dimen>
+
+    <dimen name="button_height">35dp</dimen>
+    <dimen name="button_width">80dp</dimen>
+
+    <!--跑马灯尺寸-->
+    <dimen name="marquee_text_width">123dp</dimen>
+    <dimen name="marquee_text_height">23dp</dimen>
+
+      <dimen name="list_height">290dp</dimen>
+
+
+</resources>

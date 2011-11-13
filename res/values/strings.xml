@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="hello">Hello World, CaptureActivity!</string>
+  <string name="app_name">爱拍</string>
+  <string name="aboutus_title">关于我们</string>
+  <string name="aboutus_content">""</string>
+  <string name="alert_dialog_ok">确定</string>
+  <string name="alert_dialog_cancle">取消</string>
+
+
+  <string name="aboutus_text">
+    “爱拍”系列手机客户端由上海新大陆翼码信息科技有限公司（以下简称“翼码”）开发及运营。翼码专注于电子凭证业务，是国内知名高新技术企业及中国电子凭证行业领导者和专业运营服务商。
+  </string>
+  <string name="aboutus_soft">软件版本号: V1.0</string>
+  <string name="aboutus_url">官方网址: www.imageco.com.cn</string>
+  <string name="aboutus_tel">客服热线: 400-8807005</string>
+  <string name="aboutus_email">邮箱地址: 7005@imageco.com.cn</string>
+  <string name="aboutus_qq">官方QQ群: 12344321</string>
+
+
+  <string name="message_title">请留下您的宝贵意见</string>
+  <string name="message_hinttext">你还可以输入140字</string>
+  <string name="message_contact">联系方式</string>
+  <string name="message_hintcontact">手机或邮箱</string>
+  <string name="capture_tip">请将条码置于取景框内扫描</string>
+
+
+  <string name="about_test">
+    http://sh.dl.it.com.cn/soft/net/webbrowser/ITxiazai_chrome_8.0.552.224%20Stable.exe
+  </string>
+
+  <string name="share_ipai">
+    hi，我装了这个拍码工具，可以快速扫描解析二维码，还有机会参加商家优惠活动，很不错哦！推荐给你使用http：//m.masafa.net
+  </string>
+  <string name="game_explain">
+    \n21点玩法：\n
+    1. 每张牌都有点数， 2 到 10 的牌的点数就是其牌面的数字； J 、 Q 、 K 的点数是 10 分； A 有两种算法：1 或者 11 ，如 （ A, 8 ） 是 19 点，（ A,
+    7, J ） 则为 18 点\n
+  </string>
+  <string name="game_rule">
+    \n游戏规则：\n
+    1. 规定次数内所拍之和为“21点”者，可获得A类大奖，送完即止.\n
+    2. 每个手机号码一天只能兑换一次奖品.\n
+    3. 奖品将以短彩信形式发送到你的手机上哦.\n
+    4. 每个手机每天只能进行10次有效游戏.\n
+
+  </string>
+
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/mRelativeLayout"
+                android:background="@color/zr_white"
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+    <TextView android:id="@+id/mHistory"
+              style="@style/StyleBarTitle"
+              android:text="关于我们"
+            />
+    <ScrollView
+            android:id="@+id/ScrollView02"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:layout_below="@id/mHistory"
+            >
+        <LinearLayout
+                android:background="#ffffff"
+                android:id="@+id/mLinearLayout"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                android:layout_width="280dp" android:layout_height="600dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+
+                >
+
+            <View android:layout_width="wrap_content"
+            android:layout_height="@dimen/main_button_top"/>
+            <TextView
+            style="@style/StyleContent"
+            android:text="@string/aboutus_text"
+
+            />
+            <View android:layout_width="wrap_content"
+            android:layout_height="@dimen/main_button_top"/>
+            <TextView
+            style="@style/StyleContent"
+            android:id="@+id/version"
+            android:text="@string/aboutus_soft"
+
+            />
+            <TextView
+            style="@style/StyleContent"
+            android:text="@string/aboutus_url"
+            />
+            <TextView
+            style="@style/StyleContent"
+            android:text="@string/aboutus_tel"
+            />
+            <TextView
+            style="@style/StyleContent"
+            android:text="@string/aboutus_email"
+            />
+            
+            <!--<TextView-->
+                    <!--android:text="@string/about_test"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+            <!--<TextView-->
+                    <!--android:text="@string/about_test"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

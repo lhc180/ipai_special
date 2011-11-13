@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center" android:background="@color/zrwhite2"
+    android:layout_height="wrap_content" android:layout_width="wrap_content">
+  <TabHost android:id="@+id/tabhost"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical" android:layout_width="fill_parent"
+      android:layout_height="fill_parent" android:animationCache="true"
+
+      >
+    <RelativeLayout android:orientation="vertical"
+        android:layout_height="wrap_content" android:layout_width="wrap_content">
+      <TabWidget android:id="@android:id/tabs"
+          android:tabStripEnabled="false"
+          android:layout_width="fill_parent" android:layout_height="@dimen/tab_height"
+          android:layout_alignParentBottom="true"
+          />
+      <FrameLayout android:id="@android:id/tabcontent"
+          android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/tab1" androidrientation="vertical"
+            android:baselineAligned="true" android:layout_height="wrap_content"
+            android:layout_width="fill_parent" android:orientation="vertical">
+          <TextView android:id="@+id/mMain"
+              style="@style/StyleBarTitle"
+              android:text="爱拍"
+              />
+          <ImageView android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:id="@+id/ads"
+              android:background="@drawable/ad"/>
+
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_top"/>
+          <ImageButton android:id="@+id/takephoneButton"
+              android:layout_weight="2.0" android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:background="@drawable/paimabutton"
+              android:soundEffectsEnabled="true"
+              android:layout_gravity="center_horizontal"
+              />
+           <!--<Button android:id="@+id/dasdfas"-->
+              <!--android:layout_weight="2.0" android:layout_height="wrap_content"-->
+              <!--android:layout_width="wrap_content"-->
+              <!--android:background="@drawable/paimabutton"-->
+              <!--android:soundEffectsEnabled="true"-->
+              <!--android:layout_gravity="center_horizontal"-->
+               <!--android:text="sdasdfasdfadsfasdfasdfkfja"-->
+              <!--/>-->
+
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_space"/>
+          <ImageButton android:id="@+id/histroyButton"
+              android:layout_height="wrap_content" android:layout_width="wrap_content"
+              android:background="@drawable/historybutton"
+              android:layout_gravity="center_horizontal"
+              />
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_space"/>
+          <ImageButton android:id="@+id/setupButton"
+              android:layout_height="wrap_content" android:layout_width="wrap_content"
+              android:background="@drawable/settingbutton"
+              android:layout_gravity="center_horizontal"/>
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_space"/>
+          <ImageButton android:background="@drawable/helpbutton" android:id="@+id/helpButton"
+              android:layout_height="wrap_content" android:layout_width="wrap_content"
+              android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/tab2"
+            android:layout_width="fill_parent" android:layout_height="fill_parent"
+            androidrientation="vertical" android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/tab3" androidrientation="vertical"
+            android:baselineAligned="true" android:orientation="vertical"
+            android:layout_height="wrap_content" android:layout_width="fill_parent">
+          <!--<TextView android:id="@+id/mAbout"-->
+          <!--style="@style/StyleBarTitle"-->
+          <!--android:text="About"-->
+          <!--/>-->
+          <TextView android:id="@+id/mMainAbout"
+              style="@style/StyleBarTitle"
+              android:text="爱拍"
+              />
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_top"/>
+
+          <ImageButton android:background="@drawable/aboutusbutton"
+              android:id="@+id/aboutusButton" android:layout_weight="2.0"
+              android:layout_height="wrap_content" android:layout_width="wrap_content"
+              android:layout_gravity="center_horizontal"/>
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_space"/>
+          <ImageButton android:background="@drawable/sharebutton"
+              android:id="@+id/sharephotoButton" android:layout_weight="2.0"
+              android:layout_height="wrap_content" android:layout_width="wrap_content"
+              android:layout_gravity="center_horizontal"/>
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_space"/>
+          <ImageButton android:background="@drawable/messagebutton"
+              android:id="@+id/leavemessageButton" android:layout_weight="2.0"
+              android:layout_height="wrap_content" android:layout_width="wrap_content"
+              android:layout_gravity="center_horizontal"/>
+          <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_space"/>
+          <ImageButton android:background="@drawable/checkversionbutton"
+              android:id="@+id/checkversionButton" android:layout_height="wrap_content"
+              android:layout_width="wrap_content" android:layout_gravity="center_horizontal"/>
+                <View android:layout_width="wrap_content"
+              android:layout_height="@dimen/main_button_space"/>
+          <ImageButton android:background="@drawable/checkversionbutton"
+              android:id="@+id/gamestart" android:layout_height="wrap_content"
+              android:layout_width="wrap_content" android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+      </FrameLayout>
+    </RelativeLayout>
+  </TabHost>
+</RelativeLayout>

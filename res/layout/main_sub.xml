@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     >
+   <Button android:id="@+id/btnphoto"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:background="@drawable/photo_btn_selector"
+       android:text="拍照"
+       style="@style/main_button"
+       />
+   <Button android:id="@+id/btngame"
+       android:layout_toRightOf="@id/btnphoto"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:background="@drawable/game_btn_selector"
+       android:text="游戏"
+       style="@style/main_button"
+       />
+   <Button android:id="@+id/btnhistory"
+       android:layout_below="@id/btnphoto"
+
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:background="@drawable/help_btn_selector"
+       android:text="历史"
+       style="@style/main_button"
+       />
+   <Button android:id="@+id/btnhelp"
+       android:layout_toRightOf="@id/btnhistory"
+       android:layout_below="@id/btngame"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:background="@drawable/history_btn_selector"
+       android:text="帮助"
+       style="@style/main_button"
+       />
+ </RelativeLayout>

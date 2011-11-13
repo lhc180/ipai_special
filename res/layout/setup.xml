@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_height="fill_parent"
+              android:background="@color/zr_white" android:layout_width="wrap_content">
+    <TextView android:id="@+id/mSetup"
+              style="@style/StyleBarTitle"
+              android:text="设置"
+            />
+
+    <!--<ImageView android:id="@+id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+               <!--android:src="@drawable/setup_title"/>-->
+    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/soundCheckBox"
+              android:textColor="#000000" android:text="提示音"/>
+    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/shockCheckBox"
+              android:textColor="#000000" android:text="震动"/>
+    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/copyCheckBox"
+              android:textColor="#000000" android:text="复制到剪切板上"/>
+    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/flashlightcheckBox" android:textColor="#000000" android:text="闪光灯"/>
+    -
+    <!--<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+    <!--android:id="@+id/linearLayout1" android:layout_gravity="center">-->
+
+
+    <View android:layout_width="wrap_content"
+          android:layout_height="@dimen/main_button_top"/>
+    <View android:layout_width="wrap_content"
+          android:layout_height="@dimen/main_button_top"/>
+    <Button android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" android:id="@+id/confirmbutton"
+            android:layout_gravity="center_horizontal"
+            android:text=" 确   定 "/>
+
+    <com.imageco.itake.viewcus.CheckBoxView android:id="@+id/savepsd" android:paddingLeft="5.0dip"
+                                           android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                           android:visibility="invisible"
+            />
+    <!--<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/cancelbutton"-->
+    <!--android:text=" 取 消 "/>-->
+    <!--</LinearLayout>-->
+</LinearLayout>

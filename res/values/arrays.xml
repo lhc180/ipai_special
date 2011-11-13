@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="help_title">
+        <item>1.爱拍二维码是什么?</item>
+        <item>2.爱拍二维码的主要功能介绍</item>
+        <item>3.爱拍二维码是否收费</item>
+        <item>4.如何使用爱拍二维码</item>
+
+    </string-array>
+    <string-array name="help_content">
+        <item>爱拍二维码是一款手机端的二维码解码软件，通过调用手机镜头摄像头，快速识别条码信息，该软件具有自动对焦、快速识别、自动解码的功能。</item>
+        <item>拍码:支持横竖屏扫描二维码；历史:保存最新20条拍码历史；分享:通过短信形式分享给通讯录中的好友；
+        </item>
+        <item>下载和安装爱拍二维码客户端不收取任何费用，手机上网产生的流量费由运营商收取。</item>
+        <item>在使用爱拍拍码时，让被扫描的条码置于取景框中，一般的手机是自动对焦功能，如果手机没有自动对焦功能，请手动调节相机的焦距或移动手机高度，并保持手机稳定，方便识别。</item>
+
+    </string-array>
+</resources>

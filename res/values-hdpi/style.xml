@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="StyleBarTitle">
+    <item name="android:background">@drawable/head_title</item>
+    <item name="android:layout_gravity">center_vertical</item>
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:layout_height">@dimen/title_height</item>
+    <item name="android:layout_weight">0</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textSize">25dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">#FFFFFF</item>
+  </style>
+  <!--<item name="android:shadowColor">#ff000000</item>-->
+  <!--<item name="android:shadowDx">2</item>-->
+  <!--<item name="android:shadowDy">2</item>-->
+  <!--<item name="android:shadowRadius">1</item>-->
+  <style name="StyleContent">
+    <!--<item name="android:background">@drawable/head_title</item>-->
+    <!--<item name="android:layout_gravity">center_vertical</item>-->
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">0</item>
+    <item name="android:lineSpacingExtra">15dp</item>
+    <!--android:layout_alignParentLeft="true"-->
+    <item name="android:layout_alignParentLeft">true</item>
+    <!--<item name="android:gravity">center</item>-->
+    <item name="android:textSize">17dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">#000000</item>
+    <!--<item name="android:shadowColor">#ff000000</item>-->
+    <!--<item name="android:shadowDx">2</item>-->
+    <!--<item name="android:shadowDy">2</item>-->
+    <!--<item name="android:shadowRadius">1</item>-->
+  </style>
+  <style name="fullscreen"> <!-- 为样式定义一个全局唯一的名字-->
+    <item name="android:windowNoTitle">true</item>
+    <!-- 无标题 -->
+    <item name="android:windowFullscreen">?android:windowNoTitle</item>
+    <!-- 全屏幕 -->
+  </style>
+
+
+  <style name="textMarquee"> <!-- listView跑马灯-->
+    <item name="android:layout_width">@dimen/marquee_text_width</item>
+    <item name="android:layout_height">@dimen/marquee_text_height</item>
+    <item name="android:gravity">center</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">marquee</item>
+    <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    <item name="android:textColor">@color/zr_orange</item>
+    <item name="android:textSize">15sp</item>
+    <item name="android:textStyle">bold</item>
+
+  </style>
+  <style name="my_edittext_style" parent="@android:style/Widget.EditText">
+    <item name="android:background">@color/zr_green</item>
+
+  </style>
+
+  <style name="main_button"> 
+    <item name="android:gravity">center_horizontal|bottom</item>
+    <item name="android:textColor">@color/zr_black</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_marginTop">@dimen/main_button_space</item>
+    <item name="android:layout_marginLeft">@dimen/main_button_space</item>
+    <item name="android:layout_marginRight">@dimen/main_button_space</item>
+    <item name="android:layout_marginBottom">@dimen/main_button_space</item>
+  </style>
+
+
+</resources>

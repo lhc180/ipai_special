@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/layout_1"
+    android:background="@color/zr_white"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:id="@+id/text_1"
+      style="@style/StyleBarTitle"
+      android:text="游戏"
+      />
+  <LinearLayout android:id="@+id/layout_text"
+      android:visibility="invisible"
+      android:background="@color/zr_white"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    >
+    <TextView
+        android:id="@+id/text_qianzui"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/zr_orange"
+        android:textStyle="bold"
+        android:text="你现在的点数是:"
+        />
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="21"
+        android:textSize="25sp"
+        android:textColor="@color/zr_green"
+        android:textStyle="bold"
+        />
+  </LinearLayout>
+  <LinearLayout android:id="@+id/layout_image"
+      android:background="@color/zr_white"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    >
+    <ImageView
+        android:id="@+id/image_first"
+        android:src="@drawable/poker_back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+
+        />
+    <ImageView
+        android:id="@+id/image_second"
+        android:src="@drawable/poker_back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        />
+    <ImageView
+        android:id="@+id/image_third"
+        android:src="@drawable/poker_back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        />
+    <ImageView
+        android:id="@+id/image_fourth"
+        android:src="@drawable/poker_back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        />
+    <ImageView
+        android:id="@+id/image_fifth"
+        android:src="@drawable/poker_back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        />
+
+  </LinearLayout>
+  <TextView
+      android:id="@+id/text_starttip"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_gravity="center_horizontal"
+      android:textSize="20sp"
+      android:textColor="@color/zr_orange"
+      android:textStyle="bold"
+      android:text="请按拍码开始游戏"
+      android:visibility="invisible"
+      />
+  <LinearLayout android:id="@+id/layout_btn"
+      android:background="@color/zr_white"
+      android:layout_marginTop="30dp"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    >
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:text="继续拍码?"
+        android:textColor="@color/zr_black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        />
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:text="不想玩了兑奖"
+        android:textColor="@color/zr_black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        />
+    <Button
+        android:id="@+id/btn_rule"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:text="游戏规则"
+        android:gravity="center"
+        android:textColor="@color/zr_black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        />
+    <Button
+        android:id="@+id/btn_quit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:text="结束本局"
+        android:gravity="center"
+        android:textColor="@color/zr_black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        />
+  </LinearLayout>
+</LinearLayout>
