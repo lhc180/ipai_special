@@ -29,7 +29,8 @@ public class ActiviyBaseGame extends Activity
     private JSONObject mjson;
 
     private int times;
-    private Context mActiviyBaseGame=this.getApplicationContext();
+
+    private Context mActiviyBaseGame;
 
     /**
      * Method onCreate ...
@@ -39,7 +40,7 @@ public class ActiviyBaseGame extends Activity
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-
+        mActiviyBaseGame = this.getApplicationContext();
         super.onCreate(savedInstanceState);
     }
 
@@ -56,7 +57,6 @@ public class ActiviyBaseGame extends Activity
         super
             .onStart();    //To change body of overridden methods use File | Settings | File Templates.
     }
-
 
     /**
      * Method handleDate ...数据处理
