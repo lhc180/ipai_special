@@ -16,7 +16,7 @@
        android:layout_height="wrap_content"
        android:layout_width="wrap_content"
        android:background="@drawable/game_btn_selector"
-       android:text="游戏"
+       android:text="21点游戏"
        style="@style/main_button"
        />
    <Button android:id="@+id/btnhistory"

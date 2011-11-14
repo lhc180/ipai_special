@@ -2,7 +2,9 @@ package com.imageco.itake.activityGameBase;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,23 +16,35 @@ import com.imageco.itake.activityImpl.ActivityAboutUs;
 import com.imageco.itake.activityImpl.ActivityHelp;
 import com.imageco.itake.activityImpl.ActivityHistory;
 import com.imageco.itake.activityImpl.ActivityPhoto;
+import com.imageco.itake.activityImpl.ActivitySetting;
 import com.imageco.itake.activityImpl.special.ActivityGame;
 import com.imageco.itake.activityImpl.special.ActivityPay;
 import com.imageco.itake.activityImpl.special.ActivityRule;
 import com.imageco.itake.activityImpl.special.ActivitySpecialMain;
+import com.imageco.itake.activityImpl.special.GameGlo;
 import com.imageco.itake.gloable.Constant;
+import com.imageco.util.net.Conn;
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import static com.imageco.itake.userOption.CollectionOperation.getIMEI;
 
 /**
  * Created by IntelliJ IDEA. User: OYQX Date: 11-11-12 Time: 上午11:23
  */
-public class ActiviyBaseGame extends Activity
+public class ActivityBaseGame extends Activity
 {
     private JSONObject mjson;
 
     private int times;
 
     private Context mActiviyBaseGame;
+
+    private AlertDialog alert_over;
+
+    private AlertDialog alert_necessary;
+
+    private String lefttimes;
 
     /**
      * Method onCreate ...
@@ -98,18 +112,28 @@ public class ActiviyBaseGame extends Activity
                 break;
             case R.id.menu_item_photo:
 //                gotoPhotoForRsult();//
+                gotoPhotoForRsult(Boolean.FALSE);
                 break;
             case R.id.menu_item_aboutus:
                 gotoAboutUs();
                 break;
             case R.id.menu_item_help:
-                gotoHelp();
+                gotoSetting();
                 break;
             default:
                 break;
         }
         return super.onMenuItemSelected(featureId,
             item);
+    }
+
+    /**
+     * Method gotoSetting ...设置
+     */
+    protected void gotoSetting()
+    {
+        Intent nextIntent = new Intent(this.getApplicationContext(), ActivitySetting.class);
+        startActivity(nextIntent);
     }
 
     /**
@@ -123,14 +147,22 @@ public class ActiviyBaseGame extends Activity
 
     /**
      * Method gotoPhotoForRsult ...拍照
+     *
+     * @param type 跳转方式
      */
-    protected void gotoPhotoForRsult()
+    protected void gotoPhotoForRsult(boolean type)
     {
-
         Intent nextIntent = new Intent(this.getApplicationContext(), ActivityPhoto.class);
-//        startActivity(nextIntent);
-        startActivityForResult(nextIntent, Constant.PHOTO_RESULT);
-//        finish();
+        if (type)
+        {
+            GameGlo.getInstance().setForResult(true);
+            startActivityForResult(nextIntent, Constant.PHOTO_RESULT);
+        }
+        else
+        {
+            GameGlo.getInstance().setForResult(false);
+            startActivity(nextIntent);
+        }
     }
 
     /**
@@ -144,9 +176,28 @@ public class ActiviyBaseGame extends Activity
         {
             @Override protected Boolean doInBackground(Void... params)
             {
-
+//http://222.44.51.34/aipai/interface/getTimes.php?imei=3423532452345234
                 //发送地址1,是否联网-->2.次数是否够
                 //获取mjson和times
+//                String pathStr =
+//                    "channel_id=" + getChannel() + "&display=" + getDisplay() + "&os=" + getOs();
+
+                String pathStr =
+                    "http://222.44.51.34/aipai/interface/getTimes.php?imei=" + getIMEI(false);
+
+                mjson =
+                    Conn.execute(pathStr);
+                if (mjson != null)
+                {
+                    try
+                    {
+                         lefttimes = mjson.getString("times");
+                    }
+                    catch (JSONException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
 
                 return Boolean.TRUE;
             }
@@ -156,9 +207,13 @@ public class ActiviyBaseGame extends Activity
 
                 if (aBoolean)//doinbackground结束
                 {
+                    if (lefttimes != null)
+                    {
+                        GameGlo.getInstance().setLefttimes(Integer.parseInt(lefttimes));
+                    }
                     if (mjson != null)
                     {
-                        if (times < 11)
+                        if (times > 0||times==0)
                         {
                             Intent nextIntent =
                                 new Intent(mActiviyBaseGame, ActivityGame.class);//需测试
@@ -166,12 +221,54 @@ public class ActiviyBaseGame extends Activity
                         }
                         else
                         {
-                            //游戏次数超出通知
+                            alert_over = new AlertDialog.Builder(ActivityBaseGame.this)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setTitle("温馨提示")
+                                .setMessage("该手机已经超出当天使用次数,无法游戏")
+
+                                .setNeutralButton("OK",
+                                    new DialogInterface.OnClickListener()
+                                    {
+                                        /**
+                                         * Method onClick ...
+                                         *
+                                         * @param dialog of type DialogInterface
+                                         * @param whichButton of type int
+                                         */
+                                        public void onClick(DialogInterface dialog,
+                                            int whichButton)
+                                        {
+                                            alert_over.dismiss();
+                                        }
+//
+                                    }
+                                )
+
+                                .show();
                         }
                     }
                     else
                     {
                         //联网通知
+                        alert_necessary = new AlertDialog.Builder(ActivityBaseGame.this)
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setTitle("温馨提示")
+                            .setMessage("游戏必须联网以接收奖品")
+                            .setPositiveButton("OK",
+                                new DialogInterface.OnClickListener()
+                                {
+                                    /**
+                                     * Method onClick ...
+                                     *
+                                     * @param dialog of type DialogInterface
+                                     * @param whichButton of type int
+                                     */
+                                    public void onClick(DialogInterface dialog, int whichButton)
+                                    {
+                                        alert_necessary.dismiss();
+                                    }
+                                })
+                            .show();
                     }
                 }
             }
@@ -236,6 +333,7 @@ public class ActiviyBaseGame extends Activity
      */
     protected void initItem()
     {
+//        ActivityBaseGame.this.getCurrentFocus().setBackgroundResource(R.drawable.game_background);
     }
 
     /**

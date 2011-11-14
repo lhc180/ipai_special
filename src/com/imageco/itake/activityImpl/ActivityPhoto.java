@@ -18,6 +18,7 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.imageco.R;
 import com.imageco.itake.activityImpl.special.ActivityGame;
+import com.imageco.itake.activityImpl.special.GameGlo;
 import com.imageco.itake.gloable.Constant;
 import com.imageco.itake.gloable.Gloable;
 import com.imageco.itake.gloable.SETTING;
@@ -79,7 +80,7 @@ public class ActivityPhoto extends Activity implements Callback
     /**
      * Field playBeep
      */
-    private boolean playBeep=false;
+    private boolean playBeep = false;
 
     /**
      * Field BEEP_VOLUME
@@ -299,11 +300,20 @@ public class ActivityPhoto extends Activity implements Callback
         //跳转页面
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
-//        intent.setClass(ActivityPhoto.this, ActivityResult.class);
-        intent.setClass(ActivityPhoto.this, ActivityGame.class);
-        bundle.putString("qrCode", qrCode);
-        intent.putExtras(bundle);
-        setResult(Constant.PHOTO_RESULT, intent);
+        if (GameGlo.getInstance().getForResult())
+        {
+            intent.setClass(ActivityPhoto.this, ActivityGame.class);
+            bundle.putString("qrCode", qrCode);
+            intent.putExtras(bundle);
+            setResult(Constant.PHOTO_RESULT, intent);
+        }
+        else
+        {
+            intent.setClass(ActivityPhoto.this, ActivityResult.class);
+            bundle.putString("qrCode", qrCode);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
         ActivityPhoto.this.finish();
     }
 
@@ -330,7 +340,7 @@ public class ActivityPhoto extends Activity implements Callback
             mediaPlayer.setOnCompletionListener(beepListener);
 
             AssetFileDescriptor file = getResources().openRawResourceFd(
-                R.raw.beep);
+                R.raw.cameraclick);
             try
             {
                 mediaPlayer.setDataSource(file.getFileDescriptor(),

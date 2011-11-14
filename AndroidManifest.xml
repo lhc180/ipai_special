@@ -37,7 +37,7 @@
         android:screenOrientation="portrait"/>
     <activity android:name="com.imageco.itake.activityImpl.ActivityAboutUs"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityGameBase.ActiviyBaseGame"
+    <activity android:name=".itake.activityGameBase.ActivityBaseGame"
         android:screenOrientation="portrait"/>
 
     <activity android:name="com.imageco.itake.activityImpl.special.ActivityGame"

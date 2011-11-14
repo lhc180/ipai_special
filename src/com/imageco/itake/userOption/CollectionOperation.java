@@ -17,34 +17,38 @@ import org.json.JSONObject;
 import java.util.Locale;
 
 /**
- * 收集相关信息
- * Created by IntelliJ IDEA.
- * User: OYQX
- * Date: 11-10-25
- * Time: 上午10:06
+ * 收集相关信息 Created by IntelliJ IDEA. User: OYQX Date: 11-10-25 Time: 上午10:06
  */
 @SuppressWarnings({"unchecked"})
-public class CollectionOperation {
+public class CollectionOperation
+{
     /* 屏幕的宽高 */
     public static int SCREENW;
+
     public static int SCREENH;
+
     private static Context mContext;
+
     private static String versionmsg = null;
+
     public static JSONObject jsonObject;
+
     public static JSONObject adsJson;
+
     public static String fileName;
 
-    static {
+    static
+    {
         mContext = ApplicationContext.getInstance();
     }
-
 
     /**
      * Method getDisplay returns the display of this CollectionOperation object.
      *
      * @return the display (type String) of this CollectionOperation object.
      */
-    public static String getDisplay() {
+    public static String getDisplay()
+    {
 /* 定义DisplayMetrics对象 */
         DisplayMetrics dm = mContext.getApplicationContext().getResources().getDisplayMetrics();
 
@@ -54,54 +58,68 @@ public class CollectionOperation {
         /* 窗口的高度 */
         int screenHeight = dm.heightPixels;
         String mDisplay = "";
-        if (screenWidth == 320) {//320*480
+        if (screenWidth == 320)
+        {//320*480
             mDisplay = "1";
-        } else if (screenWidth == 480) {//480*800
+        }
+        else if (screenWidth == 480)
+        {//480*800
             mDisplay = "2";
-        } else {
+        }
+        else
+        {
             mDisplay = "4";//机型不匹配
         }
 //        System.out.println("======================"+mDisplay);
-        try {
+        try
+        {
             mDisplay = Base64Encoder.encode(mDisplay, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return mDisplay;
-
     }
-
 
     /**
      * Method getSDKVersionNumber returns the SDKVersionNumber of this CollectionOperation object.
      *
      * @return the SDKVersionNumber (type int) of this CollectionOperation object.
      */
-    public static String getSDKVersionNumber() {
+    public static String getSDKVersionNumber()
+    {
         String sdkVersion;
 
         sdkVersion = android.os.Build.VERSION.SDK;
 
-        try {
+        try
+        {
             sdkVersion = Base64Encoder.encode(sdkVersion, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return sdkVersion;
     }
 
-    public static String getOs() {
+    public static String getOs()
+    {
 //        return android.os.Build.VERSION.RELEASE;
 
         String returnStr = "android";
 
 //        returnStr = android.os.Build.VERSION.SDK;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
@@ -113,17 +131,20 @@ public class CollectionOperation {
      *
      * @return the versionRelease (type String) of this CollectionOperation object.
      */
-
-    public static String getVersionRelease() {
+    public static String getVersionRelease()
+    {
 //        return android.os.Build.VERSION.RELEASE;
 
         String returnStr = android.os.Build.VERSION.RELEASE;
 
         returnStr = android.os.Build.VERSION.SDK;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
@@ -134,15 +155,20 @@ public class CollectionOperation {
      * Method getSoftVersionName ...
      *
      * @param m_context of type Context
+     *
      * @return String
      */
-    public static String getSoftVersionName(Context m_context) {
+    public static String getSoftVersionName(Context m_context)
+    {
         PackageManager manager = m_context.getPackageManager();
 
         PackageInfo info = null;
-        try {
+        try
+        {
             info = manager.getPackageInfo(m_context.getPackageName(), 0);
-        } catch (PackageManager.NameNotFoundException e) {
+        }
+        catch (PackageManager.NameNotFoundException e)
+        {
             e.printStackTrace();
             System.out.println("包没找到");
         }
@@ -153,15 +179,16 @@ public class CollectionOperation {
         returnStr = info.versionName;
         ;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return returnStr;
-
-
     }
 
     /**
@@ -169,34 +196,43 @@ public class CollectionOperation {
      *
      * @return the netType (type String) of this CollectionOperation object.
      */
-    public static String getNetType() {
+    public static String getNetType()
+    {
 
         String nettype = "";
-        ConnectivityManager connectivityManager = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);// 获取系统的连接服务
+        ConnectivityManager connectivityManager = (ConnectivityManager) mContext
+            .getSystemService(Context.CONNECTIVITY_SERVICE);// 获取系统的连接服务
         NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();// 获取网络的连接情况
-        if (activeNetInfo != null) {
-            if (activeNetInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+        if (activeNetInfo != null)
+        {
+            if (activeNetInfo.getType() == ConnectivityManager.TYPE_WIFI)
+            {
                 nettype = "WI-FI";
-            } else if (activeNetInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+            }
+            else if (activeNetInfo.getType() == ConnectivityManager.TYPE_MOBILE)
+            {
                 nettype = "EDGE/3G";
             }
-        } else {
+        }
+        else
+        {
             nettype = "没网络";
         }
-
 
         String returnStr;
 
         returnStr = nettype;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return returnStr;
-
     }
 
     /**
@@ -204,60 +240,70 @@ public class CollectionOperation {
      *
      * @return the ISP (type String) of this CollectionOperation object.
      */
-    public static String getISP() {
+    public static String getISP()
+    {
 
         TelephonyManager telmanager =
-                (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+            (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
 
         String isp = "";
         String opera = telmanager.getSimOperator();
-        if (opera != null) {// 网络运营商
-            if (opera.equals("46000") || opera.equals("46002")) {
+        if (opera != null)
+        {// 网络运营商
+            if (opera.equals("46000") || opera.equals("46002"))
+            {
                 isp = "中国移动";
-            } else if (opera.equals("46001")) {
+            }
+            else if (opera.equals("46001"))
+            {
                 isp = "中国联通";
-            } else if (opera.equals("46003")) {
+            }
+            else if (opera.equals("46003"))
+            {
                 isp = "中国电信";
             }
         }
 //        return isp;
 
-
         String returnStr;
 
         returnStr = isp;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return returnStr;
     }
 
-
     /**
      * Method getOSChar returns the OSChar of this CollectionOperation object.
      *
      * @return the OSChar (type String) of this CollectionOperation object.
      */
-    public static String getOSChar() {//中文
+    public static String getOSChar()
+    {//中文
 //        return Locale.getDefault().getDisplayName();
         String returnStr;
 
         returnStr = Locale.getDefault().getDisplayName();
         ;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return returnStr;
-
-
     }
 
     /**
@@ -265,9 +311,10 @@ public class CollectionOperation {
      *
      * @return the IMEI (type String) of this CollectionOperation object.
      */
-    public static String getIMEI() {//112312413423
+    public static String getIMEI()
+    {//112312413423
         TelephonyManager telmanager =
-                (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+            (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
 //        return telmanager.getDeviceId();
 
         String returnStr;
@@ -275,15 +322,27 @@ public class CollectionOperation {
         returnStr = telmanager.getDeviceId();
         ;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return returnStr;
+    }
 
+    public static String getIMEI(Boolean isbase64)
+    {
 
+        TelephonyManager telmanager =
+            (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+        String returnStr;
+
+        returnStr = telmanager.getDeviceId();
+        return returnStr;
     }
 
     /**
@@ -291,7 +350,8 @@ public class CollectionOperation {
      *
      * @return the channel (type String) of this CollectionOperation object.
      */
-    public static String getChannel() {//10
+    public static String getChannel()
+    {//10
 
 //        return "3";
         String returnStr;
@@ -300,9 +360,12 @@ public class CollectionOperation {
         returnStr = Constant.CHANNEL;
 //        returnStr = "2";
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
@@ -314,15 +377,19 @@ public class CollectionOperation {
      *
      * @return the mobileType (type String) of this CollectionOperation object.
      */
-    public static String getMobileType() {//desire HD
+    public static String getMobileType()
+    {//desire HD
 //        return android.os.Build.MODEL;
         String returnStr;
 
         returnStr = android.os.Build.MODEL;
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
@@ -334,9 +401,9 @@ public class CollectionOperation {
      *
      * @return the message (type String) of this CollectionOperation object.
      */
-    public static String getMessage() {//
+    public static String getMessage()
+    {//
         return null;
-
     }
 
     /**
@@ -344,7 +411,8 @@ public class CollectionOperation {
      *
      * @return the contact (type String) of this CollectionOperation object.
      */
-    public static String getContact() {
+    public static String getContact()
+    {
         return null;
     }
 
@@ -353,20 +421,27 @@ public class CollectionOperation {
      *
      * @return the versionName (type String) of this CollectionOperation object.
      */
-    public static String getVersionName() {//1.0.0
+    public static String getVersionName()
+    {//1.0.0
         PackageManager manager = mContext.getPackageManager();
         String returnStr = "";
-        try {
+        try
+        {
             PackageInfo info = manager.getPackageInfo(mContext.getPackageName(), 0);
 //            return info.versionName;
             returnStr = info.versionName;
 //            System.out.println(returnStr);
-            try {
+            try
+            {
                 returnStr = Base64Encoder.encode(returnStr, "GBK");
-            } catch (PackageManager.NameNotFoundException e) {
+            }
+            catch (PackageManager.NameNotFoundException e)
+            {
                 return null;
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
@@ -378,53 +453,51 @@ public class CollectionOperation {
      *
      * @return the versionCode (type int) of this CollectionOperation object.
      */
-    public static String getVersionCode() {//1
+    public static String getVersionCode()
+    {//1
         PackageManager manager = mContext.getPackageManager();
 
         PackageInfo info = null;
-        try {
+        try
+        {
             info = manager.getPackageInfo(mContext.getPackageName(), 0);
-        } catch (PackageManager.NameNotFoundException e) {
+        }
+        catch (PackageManager.NameNotFoundException e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("包未找到");
         }
 //            return info.versionCode;
-
 
         String returnStr;
 
         assert info != null;
         returnStr = info.versionCode + "";
 
-        try {
+        try
+        {
             returnStr = Base64Encoder.encode(returnStr, "GBK");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             System.out.println("编码错误");
         }
         return returnStr;
-
     }
 
-
     /**
-     * Method sendUserInfo ...1行为统计
-     * 发送数据
-     * getData.php?mobile_type=moto525&mobile_number=13815252565&from_channel=10&imei=232323
-     * 返回格式
-     * 1成功
-     * {"result":"0000","msg":"发送成功"}
-     * 2失败
-     * {"result":"8888","msg":"参数有误"}{"result":"9999","msg":"插入数据异
-     * 常"}
-     * 如果是8888，9999，则再请求发送一次
+     * Method sendUserInfo ...1行为统计 发送数据 getData.php?mobile_type=moto525&mobile_number=13815252565&from_channel=10&imei=232323
+     * 返回格式 1成功 {"result":"0000","msg":"发送成功"} 2失败 {"result":"8888","msg":"参数有误"}{"result":"9999","msg":"插入数据异
+     * 常"} 如果是8888，9999，则再请求发送一次
      */
-    public static void sendUserInfo() {
+    public static void sendUserInfo()
+    {
 //        String pathStr = "mobile_type=" + getMobileType() + "&mobile_number=" + "&from_channel=" + "10" + "&imei=" + getIMEI();
 //
 //        Conn.execute(Constant.URL_TRACK_BASE + Constant.URL_TRACK_ACTION + pathStr);
-        new AsyncTask<Void, Void, Boolean>() {
-
+        new AsyncTask<Void, Void, Boolean>()
+        {
             /**
              * Method doInBackground ...
              *
@@ -432,20 +505,23 @@ public class CollectionOperation {
              * @return Boolean
              */
             @Override
-            protected Boolean doInBackground(Void... params) {
-                try {
-                    String pathStr = "mobile_type=" + getMobileType() + "&mobile_number=" + "" + "&imei=" + getIMEI() + "&from_channel=" + getChannel();
+            protected Boolean doInBackground(Void... params)
+            {
+                try
+                {
+                    String pathStr =
+                        "mobile_type=" + getMobileType() + "&mobile_number=" + "" + "&imei=" +
+                            getIMEI() + "&from_channel=" + getChannel();
                     Conn.execute(Constant.URL_TRACK_BASE + Constant.URL_TRACK_ACTION + pathStr);
-                } catch (Exception e) {
+                }
+                catch (Exception e)
+                {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                     System.out.println("加密错误");
                 }
 
-
                 return null;  //TODO
             }
         }.execute();
-
     }
-
 }

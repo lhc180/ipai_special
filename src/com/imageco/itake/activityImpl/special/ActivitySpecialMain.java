@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.imageco.R;
-import com.imageco.itake.activityGameBase.ActiviyBaseGame;
+import com.imageco.itake.activityGameBase.ActivityBaseGame;
 
 /**
  * Class ActivitySpecialMain ...
  *
  * @author Administrator Created on 11-10-22
  */
-public class ActivitySpecialMain extends ActiviyBaseGame
+public class ActivitySpecialMain extends ActivityBaseGame
 {
     /**
      * Field btnPhoto 拍照
@@ -119,8 +119,7 @@ public class ActivitySpecialMain extends ActiviyBaseGame
                 switch (v.getId())
                 {
                     case R.id.btnphoto:
-                        System.out.println("btnphoto");
-                        //gotoPhotoForRsult();
+                        gotoPhotoForRsult(false);
                         break;
                     case R.id.btngame:
                         gotoGame();
@@ -141,4 +140,6 @@ public class ActivitySpecialMain extends ActiviyBaseGame
         btnHistory.setOnClickListener(listen_click);
         btnHelp.setOnClickListener(listen_click);
     }
+
+
 }

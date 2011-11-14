@@ -5,6 +5,12 @@ package com.imageco.itake.activityImpl.special;
  */
 public class GameGlo
 {
+    
+
+    private int lefttimes=0;//剩余游戏次数
+    private Boolean dissmissAble =false;
+
+    private Boolean forResult=false;
     /**
      * Field mGameGlo
      */
@@ -442,5 +448,35 @@ public class GameGlo
     public void setmGameGlo(GameGlo mGameGlo)
     {
         this.mGameGlo = mGameGlo;
+    }
+
+    public Boolean getForResult()
+    {
+        return forResult;
+    }
+
+    public void setForResult(Boolean forResult)
+    {
+        this.forResult = forResult;
+    }
+
+    public Boolean getDissmissAble()
+    {
+        return dissmissAble;
+    }
+
+    public void setDissmissAble(Boolean dissmissAble)
+    {
+        this.dissmissAble = dissmissAble;
+    }
+
+    public int getLefttimes()
+    {
+        return lefttimes;
+    }
+
+    public void setLefttimes(int lefttimes)
+    {
+        this.lefttimes = lefttimes;
     }
 }

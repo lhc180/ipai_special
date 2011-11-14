@@ -102,7 +102,7 @@ public class ActivityRun extends Activity
 //        System.out.println(CollectionOperation.getVersionName());// 1.0.0
 //        System.out.println(CollectionOperation.getSDKVersionNumber());//10
 //        System.out.println(CollectionOperation.getVersionRelease());//2.3.4
-//String useragent=(new WebView(ActivityRun.this).getSettings()).getUserAgentString();
+//        String useragent=(new WebView(ActivityRun.this).getSettings()).getUserAgentString();
 //        System.out.println("============="+useragent);
         mProgressBar = (ProgressBar) this.findViewById(R.id.progressBar);
         mProgressBar.setIndeterminate(false);

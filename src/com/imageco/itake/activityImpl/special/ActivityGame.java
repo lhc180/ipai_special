@@ -3,6 +3,7 @@ package com.imageco.itake.activityImpl.special;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,14 +11,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.imageco.R;
-import com.imageco.itake.activityGameBase.ActiviyBaseGame;
+import com.imageco.itake.activityGameBase.ActivityBaseGame;
 import com.imageco.itake.gloable.Constant;
+import com.imageco.util.net.Conn;
+import org.json.JSONObject;
+
+import static com.imageco.itake.userOption.CollectionOperation.getIMEI;
 
 /**
  * Created by IntelliJ IDEA. User: OYQX Date: 11-11-11 Time: 下午3:05
  */
-public class ActivityGame extends ActiviyBaseGame
+public class ActivityGame extends ActivityBaseGame
 {
+    private JSONObject mjson;
+
     /**
      * Field layoutDianshu 点数提示
      */
@@ -92,6 +99,8 @@ public class ActivityGame extends ActiviyBaseGame
 
     private AlertDialog alert_bigger;
 
+    private AlertDialog alert_do_correct;
+
     /**
      * Field mGameGlo
      */
@@ -157,12 +166,16 @@ public class ActivityGame extends ActiviyBaseGame
      */
     private int intPos5 = mGameGlo.getIntPos5();
 
+    private TextView text_qianzui;
+
+    private AlertDialog alert_quit;
+
     /**
      * Method onCreate ...
      *
      * @param savedInstanceState of type Bundle
      *
-     * @see com.imageco.itake.activityGameBase.ActiviyBaseGame#onCreate(Bundle)
+     * @see com.imageco.itake.activityGameBase.ActivityBaseGame#onCreate(Bundle)
      */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -176,7 +189,7 @@ public class ActivityGame extends ActiviyBaseGame
     /**
      * Method getData ...获取拍码数据
      *
-     * @see com.imageco.itake.activityGameBase.ActiviyBaseGame#getData()
+     * @see com.imageco.itake.activityGameBase.ActivityBaseGame#getData()
      */
     protected void getData()
     {
@@ -197,6 +210,7 @@ public class ActivityGame extends ActiviyBaseGame
         btn_quit = (Button) this.findViewById(R.id.btn_quit);
         btn_pay = (Button) this.findViewById(R.id.btn_pay);
         text_result = (TextView) this.findViewById(R.id.text_result);
+        text_qianzui = (TextView) this.findViewById(R.id.text_qianzui);
         text_starttip = (TextView) this.findViewById(R.id.text_starttip);
 
         intPos1 = mGameGlo.getIntPos1();
@@ -212,17 +226,19 @@ public class ActivityGame extends ActiviyBaseGame
         {
             layout_text.setVisibility(View.VISIBLE);
             text_starttip.setVisibility(View.INVISIBLE);
+            btn_continue.setText("继续拍码");
             int total = intPos1 + intPos2 + intPos3 + intPos4 + intPos5;
             //1:小于21点.2.正好21点.3:大于21点
 
             if (total == 21)
             {
+                text_qianzui.setVisibility(View.VISIBLE);
                 text_result.setText(total + "点");
                 alert_equals = new AlertDialog.Builder(ActivityGame.this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("温馨提示")
-                    .setMessage("恭喜你获得21点,立即去领奖吧.")
-                    .setPositiveButton("是",
+                    .setMessage("恭喜你获得21点,获得一等奖")
+                    .setPositiveButton("领奖去",
                         new DialogInterface.OnClickListener()
                         {
                             /**
@@ -242,14 +258,23 @@ public class ActivityGame extends ActiviyBaseGame
 
             else if (total < 21)
             {
+                text_qianzui.setVisibility(View.VISIBLE);
                 text_result.setText(total + "点");
             }
             else if (total > 21)
             {
-                alert_assert = new AlertDialog.Builder(ActivityGame.this)
+//                dismissAlert();
+                text_qianzui.setVisibility(View.INVISIBLE);
+                text_result.setText("你爆了!");
+//                LinearLayout params;
+//                params = new LinearLayout(this.getApplicationContext());
+//                params.setHorizontalGravity(View.);
+//                text_result.setLayoutParams(params);
+
+                alert_bigger = new AlertDialog.Builder(ActivityGame.this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("温馨提示")
-                    .setMessage("对不起,你的点数超出21.只能领取B奖品")
+                    .setMessage("你的点数超出21.获得二等奖")
                     .setPositiveButton("好吧,给我奖品!",
                         new DialogInterface.OnClickListener()
                         {
@@ -264,12 +289,31 @@ public class ActivityGame extends ActiviyBaseGame
                                 gotoPay();
                             }
                         })
+                    .setNeutralButton("重新开始",
+                        new DialogInterface.OnClickListener()
+                        {
+                            /**
+                             * Method onClick ...
+                             *
+                             * @param dialog of type DialogInterface
+                             * @param whichButton of type int
+                             */
+                            public void onClick(DialogInterface dialog,
+                                int whichButton)
+                            {
+                                resetData();
+                                System.exit(0);
+                            }
+//
+                        }
+                    )
+
                     .show();
             }
         }
         else
         {
-            text_starttip.setVisibility(View.VISIBLE);
+//            text_starttip.setVisibility(View.VISIBLE);提示
         }
     }
 
@@ -291,7 +335,7 @@ public class ActivityGame extends ActiviyBaseGame
                 {
                     case R.id.btn_continue:
                         int total = intPos1 + intPos2 + intPos3 + intPos4 + intPos5;
-                        int arrests = 14;
+                        int arrests = 21;
                         if (total > arrests)
                         {
                             new AlertDialog.Builder(ActivityGame.this)
@@ -310,7 +354,7 @@ public class ActivityGame extends ActiviyBaseGame
                                         public void onClick(DialogInterface dialog,
                                             int whichButton)
                                         {
-                                            gotoPhotoForRsult();
+                                            gotoPhotoForRsult(true);
                                         }
                                     })
                                 .setNegativeButton("不拍了,去领B奖品",
@@ -333,8 +377,7 @@ public class ActivityGame extends ActiviyBaseGame
                         }
                         else
                         {
-
-                            gotoPhotoForRsult();
+                            gotoPhotoForRsult(true);
                         }
                         break;
                     case R.id.btn_pay:
@@ -367,7 +410,7 @@ public class ActivityGame extends ActiviyBaseGame
             .setIcon(android.R.drawable.ic_dialog_alert)
             .setTitle("温馨提示")
             .setMessage("确定强制退出程序吗,这样你不会获得任何奖励")
-            .setPositiveButton("我不稀罕奖品!退出",
+            .setPositiveButton("不要,退出",
                 new DialogInterface.OnClickListener()
                 {
                     /**
@@ -378,13 +421,11 @@ public class ActivityGame extends ActiviyBaseGame
                      */
                     public void onClick(DialogInterface dialog, int whichButton)
                     {
+                        alert_assert.dismiss();
                         resetData();
-                        System.exit(0);
-//
-
                     }
                 })
-            .setNegativeButton("给我吧!",
+            .setNegativeButton("领奖去.",
                 new DialogInterface.OnClickListener()
                 {
                     /**
@@ -424,6 +465,10 @@ public class ActivityGame extends ActiviyBaseGame
 //            System.out.println("intPos3====================" + intPos3);
 //            System.out.println("intPos4====================" + intPos4);
 //            System.out.println("intPos5====================" + intPos5);
+            if (intPos == 11 || intPos == 12 || intPos == 13)
+            {
+                intPos = 10;//jqk=10点
+            }
 
             switch (time)
             {
@@ -443,7 +488,7 @@ public class ActivityGame extends ActiviyBaseGame
                     break;
                 case 2:
                     mGameGlo.setResIdtemp2(resIdtemp2 = resID);
-                    if ((intPos1 + intPos) < 11)
+                    if ((intPos1 + intPos) < 12)
                     {
                         if (intPos == 1)
                         {
@@ -464,7 +509,7 @@ public class ActivityGame extends ActiviyBaseGame
                 case 3:
                     mGameGlo.setResIdtemp3(resIdtemp3 = resID);
                     mGameGlo.setIntPos3(intPos);
-                    if ((intPos1 + intPos2 + intPos) < 11)
+                    if ((intPos1 + intPos2 + intPos) < 12)
                     {
                         if (intPos == 1)
                         {
@@ -486,7 +531,7 @@ public class ActivityGame extends ActiviyBaseGame
                 case 4:
                     mGameGlo.setResIdtemp4(resIdtemp4 = resID);
 //                    mGameGlo.setIntPos4(intPos);
-                    if ((intPos1 + intPos2 + intPos3 + intPos) < 11)
+                    if ((intPos1 + intPos2 + intPos3 + intPos) < 12)
                     {
                         if (intPos == 1)
                         {
@@ -509,7 +554,7 @@ public class ActivityGame extends ActiviyBaseGame
                 case 5:
                     mGameGlo.setResIdtemp5(resIdtemp5 = resID);
 //                    mGameGlo.setIntPos5(intPos);
-                    if ((intPos1 + intPos2 + intPos3 + intPos4 + intPos) < 11)
+                    if ((intPos1 + intPos2 + intPos3 + intPos4 + intPos) < 12)
                     {
                         if (intPos == 1)
                         {
@@ -546,14 +591,45 @@ public class ActivityGame extends ActiviyBaseGame
      */
     private void resetData()
     {
-        //intent
-        //单例变量
-        mGameGlo.setmGameGlo(null);
+
+        alert_quit = new AlertDialog.Builder(ActivityGame.this)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle("温馨提示")
+            .setMessage("退出将消耗一次游戏数(每天10次)")
+            .setPositiveButton("OK",
+                new DialogInterface.OnClickListener()
+                {
+                    /**
+                     * Method onClick ...
+                     *
+                     * @param dialog of type DialogInterface
+                     * @param whichButton of type int
+                     */
+                    public void onClick(DialogInterface dialog, int whichButton)
+                    {
+
+                        setTimes();
+                    }
+                })
+
+            .show();
+//        mGameGlo.setmGameGlo(null);
+//        finish();
     }
 
     @Override protected void onResume()
     {
+        if (GameGlo.getInstance().getDissmissAble())
+        {
+            dismissAlert();
+            GameGlo.getInstance().setDissmissAble(Boolean.FALSE);
+        }
+        super
+            .onResume();
+    }
 
+    private void dismissAlert()
+    {
         if (alert_assert != null)
         {
             alert_assert.dismiss();
@@ -566,8 +642,10 @@ public class ActivityGame extends ActiviyBaseGame
         {
             alert_bigger.dismiss();
         }
-        super
-            .onResume();
+        if (alert_do_correct != null)
+        {
+            alert_do_correct.dismiss();
+        }
     }
 
     /**
@@ -587,8 +665,10 @@ public class ActivityGame extends ActiviyBaseGame
             {
                 strResult = extras.getString("qrCode");
 
-                if (!strResult.equals(""))
+                if (!strResult.equals("") && strResult.contains("请访问以上网址下载正确软件版本") &&
+                    strResult.contains("http://m.masafa.net"))
                 {
+
                     strResult = strResult.substring(strResult.lastIndexOf("。") + 3);//排除\r\n
                     if (strResult.equals("14"))
                     {
@@ -608,6 +688,42 @@ public class ActivityGame extends ActiviyBaseGame
                 else
                 {
                     strResult = "";
+                    alert_do_correct = new AlertDialog.Builder(ActivityGame.this)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle("温馨提示")
+                        .setMessage("请拍摄特制卡片以开始游戏")
+                        .setPositiveButton("好,我拍",
+                            new DialogInterface.OnClickListener()
+                            {
+                                /**
+                                 * Method onClick ...
+                                 *
+                                 * @param dialog of type DialogInterface
+                                 * @param whichButton of type int
+                                 */
+                                public void onClick(DialogInterface dialog, int whichButton)
+                                {
+                                    gotoPhotoForRsult(true);
+                                }
+//
+                            })
+                        .setNeutralButton("明白了,别烦我!",
+                            new DialogInterface.OnClickListener()
+                            {
+                                /**
+                                 * Method onClick ...
+                                 *
+                                 * @param dialog of type DialogInterface
+                                 * @param whichButton of type int
+                                 */
+                                public void onClick(DialogInterface dialog, int whichButton)
+                                {
+                                    alert_do_correct.dismiss();
+                                }
+//
+                            }
+                        )
+                        .show();
                 }
                 mGameGlo.setStrResult(strResult);
             }
@@ -616,5 +732,37 @@ public class ActivityGame extends ActiviyBaseGame
                 strResult = "";
             }
         }
+    }
+
+    private void setTimes()
+    {
+        //noinspection unchecked
+        new AsyncTask<Void, Void, Boolean>()
+        {
+            @Override protected Boolean doInBackground(Void... params)
+            {//http://222.44.51.34/aipai/interface/saveTimes.php?imei=3423532452345234
+                String pathStr =
+                    "http://222.44.51.34/aipai/interface/saveTimes.php?imei=" + getIMEI(false);
+
+                mjson =
+                    Conn.execute(pathStr);
+                if (mjson != null)
+                {
+
+                    return Boolean.TRUE;
+                }
+                return Boolean.FALSE;
+            }
+
+            @Override protected void onPostExecute(Boolean aBoolean)
+            {
+                if (aBoolean)
+                {
+                    mGameGlo.setmGameGlo(null);
+                    alert_quit.dismiss();
+                    System.exit(0);
+                }
+            }
+        }.execute();
     }
 }

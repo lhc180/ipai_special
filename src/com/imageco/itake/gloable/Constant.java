@@ -5,6 +5,7 @@ package com.imageco.itake.gloable;
  */
 public interface Constant
 {
+
     public static final String FILENAME = "history";
     public static final String FILECONTANT = "content";
     public static final String FILEDATE = "date";
