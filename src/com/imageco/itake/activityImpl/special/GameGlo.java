@@ -11,10 +11,6 @@ public class GameGlo
     private Boolean dissmissAble =false;
 
     private Boolean forResult=false;
-    /**
-     * Field mGameGlo
-     */
-    private GameGlo mGameGlo;
 
     /**
      * Field resIdtemp5
@@ -100,6 +96,29 @@ public class GameGlo
         return INSTANCE;
     }
 
+    public static void resetInstance(){
+          if (INSTANCE != null)
+        {
+            INSTANCE.setLefttimes(0);
+            INSTANCE.setDissmissAble(false);
+            INSTANCE.setForResult(false);
+            INSTANCE.setIntPos1(0);
+            INSTANCE.setIntPos2(0);
+            INSTANCE.setIntPos3(0);
+            INSTANCE.setIntPos4(0);
+            INSTANCE.setIntPos5(0);
+            INSTANCE.setPayType("b");
+            INSTANCE.setResIdtemp1(0);
+            INSTANCE.setResIdtemp2(0);
+            INSTANCE.setResIdtemp3(0);
+            INSTANCE.setResIdtemp4(0);
+            INSTANCE.setResIdtemp5(0);
+            INSTANCE.setStrResult("");
+            INSTANCE.setTimes(0);
+
+        }
+
+    }
     /**
      * Method getTimes returns the times of this GameGlo object.
      *
@@ -425,30 +444,6 @@ public class GameGlo
         this.payType = payType;
     }
 
-    /**
-     * Method getmGameGlo returns the mGameGlo of this GameGlo object.
-     *
-     *  Field mGameGlo
-     *
-     * @return the mGameGlo (type GameGlo) of this GameGlo object.
-     */
-    public GameGlo getmGameGlo()
-    {
-        return mGameGlo;
-    }
-
-    /**
-     * Method setmGameGlo sets the mGameGlo of this GameGlo object.
-     *
-     *  Field mGameGlo
-     *
-     * @param mGameGlo the mGameGlo of this GameGlo object.
-     *
-     */
-    public void setmGameGlo(GameGlo mGameGlo)
-    {
-        this.mGameGlo = mGameGlo;
-    }
 
     public Boolean getForResult()
     {

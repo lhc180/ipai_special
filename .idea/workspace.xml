@@ -1,45 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="System.out" />
     <option name="TAB_LOG_LEVEL" value="INFO" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a59fe4d-9fbd-4393-9a7a-f6b7d90e6807" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/game_background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/setting_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/raw/cameraclick.ogg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActivityBaseGame.java" />
-      <change type="DELETED" beforePath="D:\intellij\ipai_special\res\drawable-hdpi\icon.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\intellij\ipai_special\res\raw\beep.ogg" afterPath="" />
-      <change type="DELETED" beforePath="D:\intellij\ipai_special\src\com\imageco\itake\activityGameBase\ActiviyBaseGame.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ad.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ad.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/aboutus_icon.png" afterPath="$PROJECT_DIR$/res/drawable/aboutus_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/main_icon.png" afterPath="$PROJECT_DIR$/res/drawable/main_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/photo_icon.png" afterPath="$PROJECT_DIR$/res/drawable/photo_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/hua_2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/imageco/R.java" afterPath="$PROJECT_DIR$/gen/com/imageco/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/photo_btn_selector.xml" afterPath="$PROJECT_DIR$/res/drawable/photo_btn_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/aipai_main.xml" afterPath="$PROJECT_DIR$/res/layout/aipai_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/game.xml" afterPath="$PROJECT_DIR$/res/layout/game.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/list_item.xml" afterPath="$PROJECT_DIR$/res/layout/list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main_sub.xml" afterPath="$PROJECT_DIR$/res/layout/main_sub.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/pay.xml" afterPath="$PROJECT_DIR$/res/layout/pay.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/rule.xml" afterPath="$PROJECT_DIR$/res/layout/rule.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/mainmenu.xml" afterPath="$PROJECT_DIR$/res/menu/mainmenu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hdpi/color.xml" afterPath="$PROJECT_DIR$/res/values-hdpi/color.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hdpi/style.xml" afterPath="$PROJECT_DIR$/res/values-hdpi/style.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivityPhoto.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivityPhoto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivityRun.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivityRun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActivityBaseGame.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActivityBaseGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivitySetting.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivitySetting.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityGame.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityPay.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityPay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityRule.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityRule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivitySpecialMain.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivitySpecialMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/GameGlo.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/GameGlo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/gloable/Constant.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/gloable/Constant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/itake/userOption/CollectionOperation.java" afterPath="$PROJECT_DIR$/src/com/imageco/itake/userOption/CollectionOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/imageco/util/net/Conn.java" afterPath="$PROJECT_DIR$/src/com/imageco/util/net/Conn.java" />
     </list>
     <ignored path="ipai_special.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,55 +75,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ActivityGame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityGame.java">
+      <file leaf-file-name="ActivitySetting.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivitySetting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="762" column="35" selection-start="24721" selection-end="24721" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="6" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivitySpecialMain.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivitySpecialMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="29" selection-start="3317" selection-end="3317" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityBaseGame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActivityBaseGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="256" column="52" selection-start="7985" selection-end="7985" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.03429603">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityPay.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityPay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.0">
+            <state line="57" column="26" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.031613976">
               <folding />
             </state>
           </provider>
@@ -166,9 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActiviyBaseGame.java" />
-        <option value="$PROJECT_DIR$/res/layout/aipai_main.xml" />
-        <option value="$PROJECT_DIR$/res/layout/game.xml" />
         <option value="$PROJECT_DIR$/res/values-hdpi/style.xml" />
         <option value="$PROJECT_DIR$/res/drawable/photo_btn_selector.xml" />
         <option value="$PROJECT_DIR$/res/layout/pay.xml" />
@@ -177,10 +106,13 @@
         <option value="$PROJECT_DIR$/res/layout/main_sub.xml" />
         <option value="$PROJECT_DIR$/res/layout/rule.xml" />
         <option value="$PROJECT_DIR$/src/com/imageco/itake/userOption/CollectionOperation.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/imageco/util/net/Conn.java" />
         <option value="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/GameGlo.java" />
         <option value="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityPay.java" />
+        <option value="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivitySpecialMain.java" />
+        <option value="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivitySetting.java" />
         <option value="$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityGame.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActivityBaseGame.java" />
       </list>
     </option>
@@ -315,7 +247,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Favorites" />
       <pane id="ProjectPane">
@@ -326,248 +257,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imageco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imageco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imageco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="userOption" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imageco" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activityGameBase" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-mdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ipai_special" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -587,8 +279,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -596,8 +288,8 @@
       <recent name="com.imageco.itake.adapterCus" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\intellij\ipai_special\res\drawable" />
       <recent name="D:\intellij\ipai_special\res\drawable-hdpi" />
+      <recent name="D:\intellij\ipai_special\res\drawable" />
       <recent name="D:\intellij\ipai_special\res\raw" />
       <recent name="D:\intellij\ipai_special\res" />
       <recent name="D:\intellij\ipai_special\testMainbutton\res\drawable" />
@@ -808,17 +500,17 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32548702" sideWeight="0.16510904" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27272728" sideWeight="0.21028037" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33116883" sideWeight="0.7943925" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39719626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="4" y="19" width="1267" height="954" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20560747" sideWeight="0.4935065" order="2" side_tool="false" content_ui="tabs" x="1288" y="35" width="1232" height="743" />
-      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.09657321" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" x="1298" y="4" width="1260" height="964" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27272728" sideWeight="0.7772586" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39719626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1295" y="23" width="1261" height="948" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20404984" sideWeight="0.4935065" order="2" side_tool="false" content_ui="tabs" x="1288" y="35" width="1232" height="743" />
+      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.408776" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" x="42" y="40" width="1196" height="680" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="-891" y="464" width="502" height="114" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271028" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32554516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12928349" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -878,107 +570,84 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/list_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="-4.75">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bxing_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main_sub.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="707" selection-end="707" vertical-scroll-proportion="0.3625954">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bxing_13.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/rule.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="41" selection-start="1621" selection-end="1621" vertical-scroll-proportion="21.821428">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bxing_12.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://D:/Program Files/Android/android-sdk/platforms/android-7/sources/android/widget/LinearLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1171" column="16" selection-start="47203" selection-end="47203" vertical-scroll-proportion="0.33118972" />
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bxing_11.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivitySetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="592" selection-end="592" vertical-scroll-proportion="0.44259566">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bxing_10.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/game.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="753" selection-end="765" vertical-scroll-proportion="0.07333333">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bxing_1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/aipai_main.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/imageco/util/net/Conn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="62" selection-start="906" selection-end="906" vertical-scroll-proportion="0.80222225">
-          <folding />
-        </state>
+        <state line="45" column="9" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/userOption/CollectionOperation.java">
+    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/gloable/SETTING.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="344" column="25" selection-start="9373" selection-end="9373" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="5" column="13" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/GameGlo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="24" selection-start="2205" selection-end="2215" vertical-scroll-proportion="-12.1639">
-          <folding />
-        </state>
+        <state line="116" column="31" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityGame.java">
+    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivityRun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="762" column="35" selection-start="24721" selection-end="24721" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="6" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="295" column="35" selection-start="9815" selection-end="9815" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivitySpecialMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="29" selection-start="3317" selection-end="3317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActivityBaseGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="52" selection-start="7985" selection-end="7985" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.03429603">
-          <folding />
-        </state>
+        <state line="45" column="41" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityPay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.0">
+        <state line="212" column="21" selection-start="6193" selection-end="6193" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityGameBase/ActivityBaseGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="367" column="32" selection-start="10702" selection-end="10702" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/special/ActivityGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="757" column="13" selection-start="24550" selection-end="24550" vertical-scroll-proportion="1.1687388" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/imageco/itake/activityImpl/ActivitySetting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="26" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.031613976">
           <folding />
         </state>
       </provider>

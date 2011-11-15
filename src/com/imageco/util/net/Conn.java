@@ -33,7 +33,7 @@ public class Conn {
      * @return JSONObject
      */
     public static JSONObject execute(String req) {
-        System.out.println("发送请求的地址是==========" + req);
+//        System.out.println("发送请求的地址是==========" + req);
         Connection conn = new Connection(req);
         boolean conFlag = conn.connect();
         JSONObject j = null;
@@ -42,7 +42,7 @@ public class Conn {
 //        assert j != null;
 //        System.out.println(assert j != null);
         if (j != null) {
-            System.out.println("服务器返回是=========>" + j.toString());
+//            System.out.println("服务器返回是=========>" + j.toString());
         }
         conn.close();
         return j;

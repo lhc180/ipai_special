@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.imageco.R;
 import com.imageco.itake.activityGameBase.ActivityBaseGame;
 import com.imageco.util.net.Conn;
@@ -18,11 +19,15 @@ import org.json.JSONObject;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.imageco.itake.userOption.CollectionOperation.getIMEI;
+
 /**
  * Created by IntelliJ IDEA. User: OYQX Date: 11-11-12 Time: 下午1:55
  */
 public class ActivityPay extends ActivityBaseGame
 {
+    private Boolean sended = false;
+
     private String phonenumber;
 
     private String backresult;
@@ -58,6 +63,10 @@ public class ActivityPay extends ActivityBaseGame
     private AlertDialog alert_show;
 
     private AlertDialog alert_mustbePhone;
+
+    private ProgressDialog progressDia;
+
+    private JSONObject mjson2;
 
     /**
      * Method onCreate ...
@@ -113,8 +122,19 @@ public class ActivityPay extends ActivityBaseGame
              */
             @Override public void onClick(View v)
             {
-                getNumber();
-                sendPhoneNum();
+                if (!sended)
+                {
+                    sended = true;
+
+                    getNumber();
+                    sendPhoneNum();
+                }
+                else
+                {
+
+                    Toast.makeText(ActivityPay.this.getApplicationContext(), "请不要重复点击",
+                        Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -151,34 +171,67 @@ public class ActivityPay extends ActivityBaseGame
 
                 if (aBoolean)
                 {
+                    if (progressDia != null)
+                    {
+                        progressDia.dismiss();
+                    }
                     if (backresult != null && backmsg != null)
                     {
-
-                        alert_show = new AlertDialog.Builder(ActivityPay.this)
-                            .setIcon(android.R.drawable.ic_dialog_alert)
-                            .setTitle("提示")
-                            .setMessage(backmsg)
-                            .setPositiveButton("ok",
-                                new DialogInterface.OnClickListener()
-                                {
-                                    /**
-                                     * Method onClick ...
-                                     *
-                                     * @param dialog of type DialogInterface
-                                     * @param whichButton of type int
-                                     */
-                                    public void onClick(DialogInterface dialog, int whichButton)
+                        if (backresult.equals("0000"))
+                        {
+//                            btn_sent.setVisibility(View.INVISIBLE);
+                            sended = true;
+                            setTimes();
+                            alert_show = new AlertDialog.Builder(ActivityPay.this)
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setTitle("提示")
+                                .setMessage(backmsg)
+                                .setPositiveButton("ok",
+                                    new DialogInterface.OnClickListener()
                                     {
-
-                                        alert_show.dismiss();
-                                        System.exit(0);
-                                    }
-                                })
-                            .show();
+                                        /**
+                                         * Method onClick ...
+                                         *
+                                         * @param dialog of type DialogInterface
+                                         * @param whichButton of type int
+                                         */
+                                        public void onClick(DialogInterface dialog, int whichButton)
+                                        {
+                                            sended = true;
+                                            alert_show.dismiss();
+                                            refreshFinish();
+                                        }
+                                    })
+                                .show();
+                        }
+                        else
+                        {
+                            sended = false;
+                            Toast.makeText(ActivityPay.this.getApplicationContext(),
+                                backmsg, Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
                 super.onPostExecute(
                     aBoolean);    //To change body of overridden methods use File | Settings | File Templates.
+            }
+
+            @Override protected void onPreExecute()
+            {
+                progressDia = new ProgressDialog(ActivityPay.this);
+//                progressDia.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDia.setMessage("正在发送请求...");
+                progressDia.setIndeterminate(false);
+                progressDia.show();
+                super
+                    .onPreExecute();    //To change body of overridden methods use File | Settings | File Templates.
+            }
+
+            @Override protected void onProgressUpdate(Void... values)
+            {
+//                progressDia.setMessage("正在发送请求...2");
+                super.onProgressUpdate(
+                    values);    //To change body of overridden methods use File | Settings | File Templates.
             }
 
             @Override protected Boolean doInBackground(Void... params)
@@ -191,6 +244,10 @@ public class ActivityPay extends ActivityBaseGame
 
                     mjson =
                         Conn.execute(pathStr);
+                    //noinspection unchecked
+                    publishProgress();
+
+                    //noinspection unchecked
                     if (mjson != null)
                     {
                         try
@@ -251,5 +308,33 @@ public class ActivityPay extends ActivityBaseGame
 
                 .show();
         }
+    }
+
+    private void setTimes()
+    {
+        //noinspection unchecked
+        new AsyncTask<Void, Void, Boolean>()
+        {
+            @Override protected Boolean doInBackground(Void... params)
+            {//http://222.44.51.34/aipai/interface/saveTimes.php?imei=3423532452345234
+                String pathStr =
+                    "http://222.44.51.34/aipai/interface/saveTimes.php?imei=" + getIMEI(false);
+
+                mjson2 =
+                    Conn.execute(pathStr);
+                if (mjson2 != null)
+                {
+
+                    return Boolean.TRUE;
+                }
+                return Boolean.FALSE;
+            }
+
+            @Override protected void onProgressUpdate(Void... values)
+            {
+                super.onProgressUpdate(
+                    values);    //To change body of overridden methods use File | Settings | File Templates.
+            }
+        }.execute();
     }
 }

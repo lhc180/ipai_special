@@ -15,6 +15,7 @@ import com.imageco.itake.activityGameBase.ActivityBaseGame;
  */
 public class ActivitySpecialMain extends ActivityBaseGame
 {
+    private GameGlo mGameGlo = GameGlo.getInstance();
     /**
      * Field btnPhoto 拍照
      */
@@ -42,6 +43,7 @@ public class ActivitySpecialMain extends ActivityBaseGame
      */
     @Override public void onCreate(Bundle savedInstanceState)
     {
+        System.out.println("oncreate main");
         setContentView(R.layout.aipai_main);//first
         super.onCreate(savedInstanceState);
     }
@@ -140,6 +142,5 @@ public class ActivitySpecialMain extends ActivityBaseGame
         btnHistory.setOnClickListener(listen_click);
         btnHelp.setOnClickListener(listen_click);
     }
-
 
 }

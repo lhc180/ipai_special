@@ -191,7 +191,7 @@ public class ActivityBaseGame extends Activity
                 {
                     try
                     {
-                         lefttimes = mjson.getString("times");
+                        lefttimes = mjson.getString("times");
                     }
                     catch (JSONException e)
                     {
@@ -213,7 +213,7 @@ public class ActivityBaseGame extends Activity
                     }
                     if (mjson != null)
                     {
-                        if (times > 0||times==0)
+                        if (times > 0 || times == 0)
                         {
                             Intent nextIntent =
                                 new Intent(mActiviyBaseGame, ActivityGame.class);//需测试
@@ -358,5 +358,14 @@ public class ActivityBaseGame extends Activity
     {
         ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         am.killBackgroundProcesses("com.imageco");
+    }
+
+    /**
+     * Method refreshFinish ...
+     */
+    protected void refreshFinish()
+    {
+        GameGlo.resetInstance();
+        finish();
     }
 }

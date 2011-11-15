@@ -302,7 +302,7 @@ public class ActivityGame extends ActivityBaseGame
                                 int whichButton)
                             {
                                 resetData();
-                                System.exit(0);
+//                                refreshFinish();
                             }
 //
                         }
@@ -758,9 +758,8 @@ public class ActivityGame extends ActivityBaseGame
             {
                 if (aBoolean)
                 {
-                    mGameGlo.setmGameGlo(null);
                     alert_quit.dismiss();
-                    System.exit(0);
+                    refreshFinish();
                 }
             }
         }.execute();
