@@ -1,67 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout android:id="@+id/mRelativeLayout2"
-                android:layout_width="fill_parent" android:layout_height="fill_parent"
-                xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffff"
-        >
-    <TextView android:id="@+id/mMessage"
-              style="@style/StyleBarTitle"
-              android:text="留言反馈"
-            />
-    <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffff"
-            android:id="@+id/mLinearLayout2"
-            android:layout_below="@id/mMessage"
-            android:layout_marginTop="20dp"
-            android:layout_centerInParent="true"
-            android:layout_width="280dp" android:layout_height="600dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="vertical"
-            >
-        <!--输入框-->
-        <!--<View android:layout_width="wrap_content"-->
-        <!--android:layout_height="@dimen/main_button_top"/>-->
-        <TextView
-                style="@style/StyleContent"
-                android:text="@string/message_title"
-                />
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffff"
+    >
+  <TextView android:id="@+id/mMessage"
+      style="@style/StyleBarTitle"
+      android:text="留言反馈"
+      />
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffff"
+      android:id="@+id/mLinearLayout2"
+      android:layout_below="@id/mMessage"
+      android:layout_marginTop="20dp"
+      android:layout_centerInParent="true"
+      android:layout_width="280dp" android:layout_height="600dp"
+      android:layout_marginBottom="20dp"
+      android:orientation="vertical"
+      >
+    <!--输入框-->
+    <!--<View android:layout_width="wrap_content"-->
+    <!--android:layout_height="@dimen/main_button_top"/>-->
+    <TextView
+        style="@style/StyleContent"
+        android:text="@string/message_title"
+        />
 
-        <com.imageco.itake.viewcus.MyEditText
-                android:layout_height="wrap_content"
-                android:layout_width="250dp"
-                android:layout_gravity="center_horizontal"
-                android:lines="10"
-                android:gravity="top"
-                android:background="#00000000"
-                android:id="@+id/mContent"
+    <com.imageco.special.itake.viewcus.MyEditText
+        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_gravity="center_horizontal"
+        android:lines="10"
+        android:gravity="top"
+        android:background="#00000000"
+        android:id="@+id/mContent"
 
-                />
-        <!--android:hint="@string/message_hinttext"-->
-        <!--联系方式-->
-        <TextView
-                style="@style/StyleContent"
-                android:text="@string/message_contact"
-                />
-        <com.imageco.itake.viewcus.MyEditText
-                android:layout_height="wrap_content"
-                android:layout_width="230dp"
-                android:lines="1" android:maxLines="1" android:singleLine="true"
-                android:hint="@string/message_hintcontact"
-                android:background="#00000000"
-                 android:id="@+id/mContact"
-                />
+        />
+    <!--android:hint="@string/message_hinttext"-->
+    <!--联系方式-->
+    <TextView
+        style="@style/StyleContent"
+        android:text="@string/message_contact"
+        />
+    <com.imageco.special.itake.viewcus.MyEditText android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:lines="1" android:maxLines="1" android:singleLine="true"
+        android:hint="@string/message_hintcontact"
+        android:background="#00000000"
+        android:id="@+id/mContact"
+        />
 
-        <View android:layout_width="wrap_content"
-              android:layout_height="@dimen/main_button_top"/>
+    <View android:layout_width="wrap_content"
+        android:layout_height="@dimen/main_button_top"/>
 
-        <Button
-                android:id="@+id/mButton"
-                android:layout_width="@dimen/button_width"
-                android:layout_height="@dimen/button_height"
-                android:text="提   交"
-                android:gravity="center"
-                android:layout_gravity="center_horizontal"
-                />
-    </LinearLayout>
+    <Button
+        android:id="@+id/mButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="提   交"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        />
+  </LinearLayout>
 
 </RelativeLayout>

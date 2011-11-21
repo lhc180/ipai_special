@@ -32,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:text=" 确   定 "/>
 
-    <com.imageco.itake.viewcus.CheckBoxView android:id="@+id/savepsd" android:paddingLeft="5.0dip"
+    <com.imageco.special.itake.viewcus.CheckBoxView android:id="@+id/savepsd" android:paddingLeft="5.0dip"
                                            android:layout_width="wrap_content" android:layout_height="wrap_content"
                                            android:visibility="invisible"
             />

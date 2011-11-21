@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:orientation="horizontal">
 
-  <com.imageco.itake.viewcus.ListTextView
+  <com.imageco.special.itake.viewcus.ListTextView
       style="@style/textMarquee"
       android:id="@+id/itemName"
 

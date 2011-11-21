@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.imageco" android:versionCode="1180"
+    package="com.imageco.special" android:versionCode="1180"
     android:versionName="v1.0">
   <uses-sdk android:minSdkVersion="8"/>
   <application android:icon="@drawable/icon" android:label="@string/app_name"
       android:theme="@android:style/Theme.NoTitleBar"
-      android:name="com.imageco.util.other.ApplicationContext">
-    <activity android:name="com.imageco.itake.activityImpl.ActivityRun"
+      android:name=".util.other.ApplicationContext">
+    <activity android:name=".itake.activityImpl.ActivityRun"
         android:screenOrientation="portrait"
         android:clearTaskOnLaunch="true"
         android:label="@string/app_name"
@@ -27,24 +27,24 @@
     </activity>
     <activity android:name=".itake.activityImpl.ActivityHistory"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityImpl.ActivitySetting"
+    <activity android:name=".itake.activityImpl.ActivitySetting"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityImpl.ActivityMessage"
+    <activity android:name=".itake.activityImpl.ActivityMessage"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityImpl.ActivityResult"
+    <activity android:name=".itake.activityImpl.ActivityResult"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityImpl.ActivityHelp"
+    <activity android:name=".itake.activityImpl.ActivityHelp"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityImpl.ActivityAboutUs"
+    <activity android:name=".itake.activityImpl.ActivityAboutUs"
         android:screenOrientation="portrait"/>
     <activity android:name=".itake.activityGameBase.ActivityBaseGame"
         android:screenOrientation="portrait"/>
 
-    <activity android:name="com.imageco.itake.activityImpl.special.ActivityGame"
+    <activity android:name=".itake.activityImpl.special.ActivityGame"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityImpl.special.ActivityPay"
+    <activity android:name=".itake.activityImpl.special.ActivityPay"
         android:screenOrientation="portrait"/>
-    <activity android:name="com.imageco.itake.activityImpl.special.ActivityRule"
+    <activity android:name=".itake.activityImpl.special.ActivityRule"
         android:screenOrientation="portrait"/>
 
   </application>
